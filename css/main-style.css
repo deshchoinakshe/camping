@@ -1,0 +1,468 @@
+/* inter-300 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/inter-v13-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* inter-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/inter-v13-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* inter-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/inter-v13-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* inter-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/inter-v13-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+body{
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: #2D2D2D;
+}
+.wrapper{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* Загальні стилі скролінгової полоси */
+::-webkit-scrollbar {
+  width: 12px; /* Ширина скролінгової полоси */
+}
+
+/* Стилі самої полоси (бару) */
+::-webkit-scrollbar-thumb {
+  background: #a1a1a1; /* Колір бару */
+}
+
+/* Стилі полоси, коли курсор на неї наведено */
+::-webkit-scrollbar-thumb:hover {
+  background: #888; /* Колір бару при наведенні */
+}
+
+/* Стилі полоси, коли вона натиснута */
+::-webkit-scrollbar-thumb:active {
+  background: #555; /* Колір бару при натисканні */
+}
+
+/* Прозорий фон для скролінгової полоси */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2); /* Прозорий фон */
+}
+
+/* --- Header styles start --- */
+
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.header__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 56px;
+}
+.header__list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.header__item{
+  margin-right: 100px;
+}
+.header__item:last-child{
+  margin-right: 0px;
+}
+.header__link{
+  font-size: 18px;
+  line-height: 24px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.header__link:hover, .header__link:focus, .header__link:active{
+  color: #7D7D7D;
+  transition: color 0.2s ease;
+}
+
+/* --- Header styles end --- */
+
+
+/* --- Intro styles start --- */
+
+.intro{
+  /*min-height: 100vh;*/
+  background: url(../img/main-intro-bg.png) no-repeat center;
+  background-size: cover;
+  padding-top: 300px;
+  padding-bottom: 404px;
+}
+
+.intro__title{
+  max-width: 700px;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 80px;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.intro__subtitle{
+  max-width: 632px;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 33px;
+  color: white;
+}
+
+/* --- Intro styles end --- */
+
+/* --- About styles start --- */
+
+.main__section{
+  background: url(../img/main-bg.png) no-repeat center;
+  background-size: cover;
+}
+
+.about__sub-title{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #345E40;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.about__main-title{
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #2D2D2D;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.about__main-text{
+  font-size: 18px;
+  max-width: 875px;
+  margin: 0 auto;
+  font-weight: 400;
+  line-height: 30px;  
+  color: #2D2D2D;
+  text-align: center;
+  padding-top: 36px;
+}
+
+.about__main-icon-row{
+  align-items: center;
+  display: grid;
+  grid-template-columns: 3fr 1fr 3fr 1fr 3fr 1fr 3fr 1fr 3fr;
+  padding-top: 66px;
+  max-width: 1500px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.about__main-icon-block {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  text-align: center;
+  align-self: end;
+}
+
+.about__main-icon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-right: 100px;
+  margin: 0 auto; 
+}
+
+.about__main-line{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-right: 100px;
+  margin: 0 auto; 
+}
+
+.about__main-icon-text {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 30px;
+  margin-top: auto;
+}
+
+.about__cards{
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0 130px;
+  max-width: 1500px;
+  margin: 66px auto;
+}
+
+.about__card-title{
+  font-size: 25px;  
+  font-weight: 700;
+  padding-top: 36px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.about__card-info{
+  text-align: center;
+}
+
+/* --- About styles end --- */
+
+/* --- Activity styles start --- */
+
+.activity__wrap{
+  max-width: 1500px;
+  margin: auto;
+  padding-bottom: 30px;
+}
+
+.activity__sub-title{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #345E40;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.activity__main-title{
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #2D2D2D;
+  text-align: center;
+  padding-top: 20px;
+  max-width: 706px;
+  line-height: 74.12px;
+  margin: 0 auto;
+}
+
+.activity__block1{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.activity__cards{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0 65px;
+  max-width: 745px;
+  margin: auto;
+  margin-top: 60px;
+}
+
+.activity__card-number {
+  display: block;
+  margin: 0 auto; 
+  text-align: center;
+  max-width: 100%;
+}
+
+.activity__card-title{  
+  font-size: 25px;
+  font-weight: 700;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.activity__card-info{
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.activity__card-image{
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.activity__block2{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 30px;
+}
+
+/* --- Activity styles end --- */
+
+/* --- Footer styles start --- */
+
+.footer{
+  background: #2D2D2D;
+}
+
+.footer__item{
+  display: flex;
+  align-items: center;
+}
+
+.footer__sub {
+  width: 70%;
+}
+
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  width: 30%;
+}
+
+.footer__title{
+  max-width: 700px;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 70px;
+  color: white;
+  padding-top: 100px;
+  margin-bottom: 68px;
+}
+
+.email-form__field{
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid white;
+  width: 650px;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+}
+
+.email-form__info{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.email-form__submit{
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid white;
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  transition: color 0.2s ease;
+}
+
+.email-form__submit:hover, .email-form__submit:focus, .email-form__submit:active{
+  color: #7D7D7D;
+  transition: color 0.2s ease;
+}
+
+.footer__logo{
+  padding-top: 85px;
+  padding-bottom: 35px;
+}
+
+.footer__copyright{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: white;
+  padding-bottom: 100px;
+}
+
+.footer__menu-sitemap {
+  display: flex;
+  flex-direction: column; /* Встановлюємо вертикальну орієнтацію контейнера */
+}
+
+.footer__menu-title {
+  margin: 0;
+  max-width: 700px;
+  font-size: 25px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.footer__menu-list {
+  list-style: none; /* Знімаємо маркери списку */
+  padding: 0;
+  display: flex;
+}
+
+.footer__menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Вирівнюємо по верхньому краю контейнера */
+  margin-right: 100px;
+  margin-bottom: 70px;
+}
+
+.footer__menu-link {
+  text-decoration: none;
+  color: white;
+  transition: color 0.2s ease;
+}
+
+.footer__menu-link:hover, .footer__menu-link:focus, .footer__menu-link:active{
+  color: #7D7D7D;
+  transition: color 0.2s ease;
+}
+
+.footer__menu-contacts{
+  margin: 0;
+  max-width: 700px;
+  font-size: 25px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.footer__menu-email{
+  text-decoration: none;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.footer__menu-number{
+  text-decoration: none;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.footer__social-icon{
+  margin-right: 25px;
+}
+
+/* --- Footer styles end --- */
